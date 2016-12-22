@@ -1,0 +1,29 @@
+$normal: 'Conv_helveticaneuecyr-roman';
+$bold: 'Conv_helveticaneuecyr-bold';
+$arial: 'Arial-Regular';
+$medium: 'Conv_helveticaneuecyr-medium';
+
+
+
+$bp-x-large:    "only screen and (min-width : 1260px)";
+$min-s:    "only screen and (min-width : 768px)";
+
+$bp-large:      "only screen and (max-width : 1259px)";
+$bp-medium:     "only screen and (max-width : 991px)";
+$bp-small:      "only screen and (max-width : 767px)";
+$bp-smm:      "only screen and (max-width : 550px)";
+$bp-xsmall:    "only screen and (max-width : 479px)";
+$bp-xxsmall:    "only screen and (max-width : 320px)";
+
+
+// ul {
+	// @media #{$bp-small} {
+	// 	width: 100%;
+	// }
+// }
+
+// ul {  
+//   @include respond-to(desktope) {
+//     width: 400%;
+//   }
+// }

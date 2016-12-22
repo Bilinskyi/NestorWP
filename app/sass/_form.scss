@@ -1,0 +1,49 @@
+input:not([type=submit]) {
+
+}
+
+input[type=submit] {
+  display: inline-block;
+  outline: none;
+  border: none;
+  
+  &:hover {
+    background: #6db82a;
+  }
+  &:active {
+    transform: translateY(1px);
+  }
+}
+input.error {
+  border: 2px solid red !important;
+}
+
+
+
+
+.button {
+  width: 270px;
+  height: 50px;
+  border: 1px solid #ffc600;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 0;
+  text-align: center;
+  color: black;
+  font-size: 18px;
+  transition: .15s;
+  text-decoration: none;
+  line-height: 50px;
+  &.btn-bg {
+    background-color: #ffc600;
+    &:hover {
+      background-color: #ffba00;
+    }
+  }
+  &:hover {
+    background-color: #ffc600;
+  }
+  &:active {
+    background-color: #ffa200 !important;
+  }
+}
