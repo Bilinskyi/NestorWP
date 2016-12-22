@@ -1,7 +1,7 @@
-::-webkit-input-placeholder {font-family: 'Open Sans', sans-serif;color: rgba(236, 111, 6, 0.34);font-size: 14px;font-weight: 400;}
-::-moz-placeholder {font-family: 'Open Sans', sans-serif;color: rgba(236, 111, 6, 0.34);font-size: 14px;font-weight: 400;}
-:-moz-placeholder {font-family: 'Open Sans', sans-serif;color: rgba(236, 111, 6, 0.34);font-size: 14px;font-weight: 400;}
-:-ms-input-placeholder {font-family: 'Open Sans', sans-serif;color: rgba(236, 111, 6, 0.34);font-size: 14px;font-weight: 400;}
+::-webkit-input-placeholder {color: #b4b4b4;font-size: 16px;font-family: $normal;}
+::-moz-placeholder {color: #b4b4b4;font-size: 16px;font-family: $normal;}
+:-moz-placeholder {color: #b4b4b4;font-size: 16px;font-family: $normal;}
+:-ms-input-placeholder {color: #b4b4b4;font-size: 16px;font-family: $normal;}
 
 
 *, *:before, *:after {
@@ -33,6 +33,18 @@ body {
   font-size: 16px;
   min-height: 100%;
   padding-bottom: 140px;
+  // &>*:not(.cssload-dots) {
+  //   display: none;
+  // }
+  // &.loaded {
+  //   &>* {
+  //     display: block;
+  //   }
+  //   .cssload-dots {
+  //     display: none;
+  //   }
+  // }
+
 }
 
 ul {
@@ -98,5 +110,20 @@ p {
   width: 100%;
   .t-cell {
     display: table-cell;
+  }
+}
+
+
+.hidden-xs {
+  display: block;
+  @media #{$bp-small} {
+    display: none;
+  }
+}
+
+.visible-xs {
+  display: none;
+  @media #{$bp-small} {
+    display: block;
   }
 }

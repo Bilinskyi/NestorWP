@@ -1,6 +1,24 @@
 
 $(document).ready(function(){
 
+
+
+
+  $(window).on('load', function() {
+
+
+    // setTimeout(function() {
+
+     $('.cssload-dots').fadeOut(300);
+     $('.cover').fadeOut(300);
+
+   // },1000);
+
+
+  });
+
+
+
   var flag = true;
   var flag2 = true;
   // var text = $('.prepend .text-bg');

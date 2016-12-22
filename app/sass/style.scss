@@ -4,6 +4,9 @@
 @import "_header.scss";
 @import "_slider.scss";
 @import "_form.scss";
+@import "_preloader.scss";
+
+
 
 
 header {
@@ -19,13 +22,16 @@ header {
 		font-size: 12px;
 		float: right;
 		@media #{$bp-small} {
-		      display: none;
+			display: none;
 		}
 	}
 	.logo-wrapp {
 		float: left;
 		position: relative;
 		min-width: 50%;
+		@media #{$bp-small} {
+			width: 100%;
+		}
 		.logo {
 			display: inline-block;
 			text-decoration: none;
@@ -60,11 +66,16 @@ header {
 			font-family: $normal;
 			font-size: 16px;
 			line-height: 19px;
+			@media #{$bp-small} {
+				font-size: 24px;
+				line-height: 29px;
+				font-family: $bold;
+			}
 		}
 	}
 	&.main-page {
 		@media #{$bp-small} {
-		      padding-bottom: 80px;
+			padding-bottom: 80px;
 		}
 		.top-mail {
 			float: none;
@@ -449,19 +460,19 @@ header {
 		font-size: 48px;
 		font-family: $medium;
 		@media #{$bp-large} {
-		      font-size: 35px;
+			font-size: 35px;
 		}
 		@media #{$bp-medium} {
-		      font-size: 30px;
+			font-size: 30px;
 		}
 		@media #{$bp-small} {
-		      font-size: 25px;
+			font-size: 25px;
 		}
 	}
 	.text-bg {
 		margin-bottom: 70px;
 		@media #{$bp-small} {
-		      margin-bottom: 20px;
+			margin-bottom: 20px;
 		}
 	}
 
@@ -482,10 +493,10 @@ footer {
 	width: 100%;
 	&.footer-all-page {
 		@media #{$bp-small} {
-		    ul li {
-		    	&:nth-child(1) {
-		    		display: inline-block;
-		    	}
+			ul li {
+				&:nth-child(1) {
+					display: inline-block;
+				}
 				&:nth-child(2) {
 					display: none;
 				}
@@ -592,14 +603,17 @@ footer {
 	color: black;
 	font-size: 48px;
 	font-family: $bold;
+	&.white {
+		color: #fff;
+	}
 	@media #{$bp-large} {
-	      font-size: 40px;
+		font-size: 40px;
 	}
 	@media #{$bp-medium} {
-	      font-size: 35px;
+		font-size: 35px;
 	}
 	@media #{$bp-small} {
-	      font-size: 30px;
+		font-size: 30px;
 	}
 	&+.title {
 		margin-top: 15px;
@@ -612,7 +626,7 @@ footer {
 		display: inline-block;
 		vertical-align: middle;
 		@media #{$bp-small} {
-		      display: none;
+			display: none;
 		}
 	}
 	.social-net {
@@ -620,16 +634,16 @@ footer {
 		vertical-align: middle;
 		padding: 0 20px;
 		@media #{$bp-small} {
-		      padding-left: 0;
+			padding-left: 0;
 		}
 		li {
 			display: inline-block;
 			vertical-align: middle;
 			margin: 0 15px;
 			@media #{$bp-small} {
-			      &:first-child {
-			      	margin-left: 0;
-			      }
+				&:first-child {
+					margin-left: 0;
+				}
 			}
 			a {
 				font-size: 22px;
@@ -646,6 +660,48 @@ footer {
 
 
 
+.section-thx {
+	margin-top: 15px;
+	@media #{$bp-small} {
+		margin-top: 0;
+	}
+	.thx-block {
+		position: relative;
+		width: 100%;
+		max-width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: #44a644;
+		border-radius: 5px;
+		padding: 80px 65px 70px;
+		text-align: center;
+		@media #{$bp-small} {
+			padding: 100px 22px 60px;
+		}
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 27px;
+			left: 0;
+			right: 0;
+			margin-left: auto;
+			margin-right: auto;
+			background: url('../img/thx-top.png') center top no-repeat;
+			width: 70px;
+			height: 20px;
+		}
+		p {
+			margin-top: 10px;
+		}
+		.title {
+			@media #{$bp-small} {
+				font-size: 24px;
+				line-height: 29px;
+			}
+		}
+	}
+}
 
 
 
@@ -685,10 +741,9 @@ h3 {
 .fb-page {
 	max-width: 100%;
 	@media #{$bp-small} {
-	      display: none !important;
+		display: none !important;
 	}
 }
-
 
 
 

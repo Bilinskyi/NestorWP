@@ -1,21 +1,69 @@
 input:not([type=submit]) {
-
+  width: 100%;
+  max-width: 580px;
+  display: block;
+  height: 60px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding-left: 20px;
+  color: #000;
+  font-size: 16px;
+  font-family: $normal;
+  margin-bottom: 27px;
+  @media #{$bp-small} {
+    height: 50px;
+  }
 }
 
-input[type=submit] {
+textarea {
+  width: 100%;
+  max-width: 580px;
+  padding-top: 20px;
+  display: block;
+  height: 180px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding-left: 20px;
+  color: #000;
+  resize: none;
+  font-size: 16px;
+  font-family: $normal;
+  margin-bottom: 27px;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+button[type=submit] {
+  width: 310px;
   display: inline-block;
   outline: none;
   border: none;
-  
+  height: 70px; 
+  box-shadow: 0 5px 0 #fbb202;
+  color: black;
+  font-size: 24px;
+  font-family: $bold;
+  margin-top: 13px;
+  @media #{$bp-small} {
+    width: 290px;
+    max-width: 100%;
+    height: 50px;
+    font-size: 18px;
+    font-family: $normal;
+  }
   &:hover {
-    background: #6db82a;
+    cursor: pointer;
   }
   &:active {
-    transform: translateY(1px);
+    transform: translateY(5px);
+    box-shadow: none;
   }
 }
 input.error {
-  border: 2px solid red !important;
+  border: 1px solid red !important;
 }
 
 
@@ -31,7 +79,6 @@ input.error {
   text-align: center;
   color: black;
   font-size: 18px;
-  transition: .15s;
   text-decoration: none;
   line-height: 50px;
   &.btn-bg {
@@ -42,8 +89,10 @@ input.error {
   }
   &:hover {
     background-color: #ffc600;
+    transition: .15s;
   }
   &:active {
     background-color: #ffa200 !important;
+    transition: 0s;
   }
 }
